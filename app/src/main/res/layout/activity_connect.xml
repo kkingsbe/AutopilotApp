@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient2"
+    android:background="@color/colorPrimary"
     tools:context=".Connect">
 
     <Button
         android:id="@+id/connectButton"
         android:layout_width="201dp"
         android:layout_height="78dp"
-        android:background="#8105FF"
+        android:background="@color/colorAccent"
         android:onClick="connect"
         android:text="Connect To UAV"
         android:textColor="@android:color/background_light"

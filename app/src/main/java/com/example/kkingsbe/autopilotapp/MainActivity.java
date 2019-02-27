@@ -33,6 +33,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         functionList.add(new FunctionItem("Servos", "Make sure all servos are working correctly"));
         functionList.add(new FunctionItem("PID Params", "Tune the PID parameters"));
         functionList.add(new FunctionItem("Manual Flight", "Fly the UAV using the tilt sensors on your phone"));
+        functionList.add(new FunctionItem("Servo Config", "Configure and add new servos"));
+        functionList.add(new FunctionItem("Test Map", "ONLY FOR TESTING, REMOVE WHEN DONE"));
 
         functionsRecyclerView = findViewById(R.id.functionsRecyclerView);
         functionsRecyclerView.setHasFixedSize(true);
@@ -51,9 +53,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     case "Servos":
                         intent = new Intent(MainActivity.this, ServoTest.class);
                         startActivityForResult(intent, 1);
+                        break;
                     case "Manual Flight":
                         intent = new Intent(MainActivity.this, ManualFlight.class);
                         startActivityForResult(intent, 2);
+                        break;
+                    case "Servo Config":
+                        intent = new Intent(MainActivity.this, ManualFlight.class);
+                        startActivityForResult(intent, 3);
+                        break;
+                    case "Test Map":
+                        intent = new Intent(MainActivity.this, TestMap.class);
+                        startActivityForResult(intent, 4);
+                        break;
                 }
             }
         });
